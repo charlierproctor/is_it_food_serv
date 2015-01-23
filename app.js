@@ -4,7 +4,7 @@ var quotes = require("./quotes.json")
 
 app.get('/', function (req, res) {
   var rand = Math.floor((Math.random() * quotes["quotes"].length))
-  res.send(quotes["quotes"][rand]);
+  res.json(quotes["quotes"][rand]);
 })
 
 var port = process.env.PORT || 3000;
